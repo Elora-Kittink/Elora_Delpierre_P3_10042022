@@ -134,7 +134,6 @@ class Player {
                 let warriorName = Utils.checkReadLine()
                 perso = Warrior(name: warriorName)
                 
-                
             case "mage":
                 print("Donnez un nom à votre mage")
                 let magusName = Utils.checkReadLine()
@@ -147,16 +146,16 @@ class Player {
                 
                 
             default:
-                print("Nous n'avons pas compris votre choix, recommencez")
+                print("Nous n'avons pas compris votre choix")
                 perso = nil
             }
-            
+// unwrap the optional, check that the name is not already taken and add the name to the list of taken names
             if let perso = perso,
                Game.charactersNames.first(where: {$0 == perso.name}) == nil {
                 squad.append(perso)
                 Game.charactersNames.append(perso.name)
             } else {
-                print("ce nom est déjà pris !")
+                print("erreur, recommencez !")
             }
         }
         // fill the empty squad array
@@ -174,7 +173,7 @@ class Player {
         let choice = Utils.checkReadLine()
         // compare the previous variable content to each character in squad, if find match return it, if not replay the function
         guard let characterChosen = player.playerSquad.first(where: { $0.name == choice && $0.pv > 0}) else {
-            print("\(player.name) aucun personnage ne corresponds à ce nom, choisissez à nouveau un personnage")
+            print("aucun personnage ne corresponds à ce nom, choisissez à nouveau un personnage")
             return choseInSquad(player: player)
         }
         return characterChosen
