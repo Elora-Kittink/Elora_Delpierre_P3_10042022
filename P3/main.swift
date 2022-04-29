@@ -8,7 +8,6 @@
 import Foundation
 
 
-var partie1 = Game()
+var game = Game()
 
-partie1.createPlayers()
-partie1.startPlaying()
+game.startPlaying()

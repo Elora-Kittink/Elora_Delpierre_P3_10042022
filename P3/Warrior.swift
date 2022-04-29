@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+// class that inherits from the BaseType class
+class Warrior: BaseType {
+    
+    init(name: String) {
+        super.init(pv: 50, weapon: .sword, healCapacity: false, name: name)
+        
+    }
+}

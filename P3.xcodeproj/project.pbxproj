@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		D5324571281AD4AF005DB57B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5324570281AD4AF005DB57B /* main.swift */; };
 		D5324573281AD4B7005DB57B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5324572281AD4B7005DB57B /* Model.swift */; };
+		D591A955281C4961005223F4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A954281C4961005223F4 /* Utils.swift */; };
+		D591A957281C4994005223F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A956281C4994005223F4 /* Player.swift */; };
+		D591A959281C49CC005223F4 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A958281C49CC005223F4 /* BaseType.swift */; };
+		D591A95B281C4A0B005223F4 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A95A281C4A0B005223F4 /* Warrior.swift */; };
+		D591A95D281C4A2E005223F4 /* Magus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A95C281C4A2E005223F4 /* Magus.swift */; };
+		D591A95F281C4A92005223F4 /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A95E281C4A92005223F4 /* Dwarf.swift */; };
+		D591A961281C4AAD005223F4 /* weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A960281C4AAD005223F4 /* weapons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +33,13 @@
 /* Begin PBXFileReference section */
 		D5324570281AD4AF005DB57B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D5324572281AD4B7005DB57B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D591A954281C4961005223F4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D591A956281C4994005223F4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D591A958281C49CC005223F4 /* BaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
+		D591A95A281C4A0B005223F4 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
+		D591A95C281C4A2E005223F4 /* Magus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magus.swift; sourceTree = "<group>"; };
+		D591A95E281C4A92005223F4 /* Dwarf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
+		D591A960281C4AAD005223F4 /* weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weapons.swift; sourceTree = "<group>"; };
 		D597C0D72804813E00976F19 /* P3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = P3; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,6 +59,13 @@
 			children = (
 				D5324570281AD4AF005DB57B /* main.swift */,
 				D5324572281AD4B7005DB57B /* Model.swift */,
+				D591A954281C4961005223F4 /* Utils.swift */,
+				D591A956281C4994005223F4 /* Player.swift */,
+				D591A958281C49CC005223F4 /* BaseType.swift */,
+				D591A95A281C4A0B005223F4 /* Warrior.swift */,
+				D591A95C281C4A2E005223F4 /* Magus.swift */,
+				D591A95E281C4A92005223F4 /* Dwarf.swift */,
+				D591A960281C4AAD005223F4 /* weapons.swift */,
 			);
 			path = P3;
 			sourceTree = "<group>";
@@ -124,8 +145,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D591A95B281C4A0B005223F4 /* Warrior.swift in Sources */,
+				D591A957281C4994005223F4 /* Player.swift in Sources */,
+				D591A95F281C4A92005223F4 /* Dwarf.swift in Sources */,
+				D591A959281C49CC005223F4 /* BaseType.swift in Sources */,
+				D591A95D281C4A2E005223F4 /* Magus.swift in Sources */,
 				D5324571281AD4AF005DB57B /* main.swift in Sources */,
 				D5324573281AD4B7005DB57B /* Model.swift in Sources */,
+				D591A955281C4961005223F4 /* Utils.swift in Sources */,
+				D591A961281C4AAD005223F4 /* weapons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
