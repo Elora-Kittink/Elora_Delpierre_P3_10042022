@@ -8,10 +8,11 @@
 import Foundation
 
 // class that inherits from the BaseType class
-class Warrior: BaseType {
+class Warrior: BaseCharacter {
+
     
     init(name: String) {
-        super.init(pv: 50, weapon: .sword, healCapacity: false, name: name)
+        super.init(pv: 50, weapon: .sword, healCapacity: false, name: name, pvMax: 50)
         
     }
 }

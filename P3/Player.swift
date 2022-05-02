@@ -19,9 +19,9 @@ class Player {
             return false
         }
     }
-
+    
     // the squad/team of the player
-    var squad: [BaseType] = []
+    var squad: [BaseCharacter] = []
     
     init(name: String){
         self.name = name
@@ -30,13 +30,13 @@ class Player {
     // function of team creation, continue as long as the squad array
     func createSquad() {
         
-        var squad: [BaseType] = []
+        var squad: [BaseCharacter] = []
         while squad.count < 3 {
             
             print("les nom déjà pris sont : \(Game.charactersNames)")
             print("\(self.name) ajouter un personnage à votre équipe : tapez guerrier ou mage ou nain")
             let characterTypeChoosed = Utils.checkReadLine()
-            let perso: BaseType?
+            let perso: BaseCharacter?
             
             switch characterTypeChoosed {
             case "guerrier":
@@ -59,7 +59,7 @@ class Player {
                 print("Nous n'avons pas compris votre choix")
                 perso = nil
             }
-// unwrap the optional, check that the name is not already taken and add the name to the list of taken names
+            // unwrap the optional, check that the name is not already taken and add the name to the list of taken names
             if let perso = perso,
                Game.charactersNames.first(where: {$0 == perso.name}) == nil {
                 squad.append(perso)
@@ -72,13 +72,13 @@ class Player {
         self.squad = squad
         
         // update the pv's squad
-//        self.updateSquadPv(player: self)
+        //        self.updateSquadPv(player: self)
     }
     
     
     // function that checks that the readline contains something and that the entry corresponds to a character in an array of a team given in parameter
     
-    func choseInSquad(player: Player) -> BaseType {
+    func choseInSquad(player: Player) -> BaseCharacter {
         // if the readline is not empty put the content in the variable and move on, if empty replay the function
         let choice = Utils.checkReadLine()
         // compare the previous variable content to each character in squad, if find match return it, if not replay the function
@@ -98,7 +98,7 @@ class Player {
         let attackOrHealChoice = Utils.checkReadLine()
         //  if attack chosed
         if attackOrHealChoice == "attaquer" {
-            print("choisissez un de vos combatant")
+            print("choisissez un de vos combatant : \(playerAttacking.squad.map({$0.name}))")
             // chose a character to fight whith the function checking readline and array
             let fighter = choseInSquad(player: playerAttacking)
             print("choisissez un ennemi dans l'équipe adverse : \(playerAttacked.squad.map({$0.name}))")
@@ -108,7 +108,7 @@ class Player {
             // launch the attack methode of character
             fighter.attack(enemy: enemy)
             print("\(enemy.name) enemi n'a plus que \(enemy.pv) de points de vie")
-//            updateSquadPv(player: playerAttacked)
+            //            updateSquadPv(player: playerAttacked)
             // if heal chosed
         } else if attackOrHealChoice == "soigner" {
             // check that there is a mage alive in the squad
@@ -125,7 +125,7 @@ class Player {
             // heal the teammate chosed
             magus.heal(injuredTeamMate: injuredTeammate)
             print("\(injuredTeammate.name) soigné à maintenant \(injuredTeammate.pv) points de vie")
-//            updateSquadPv(player: playerAttacking)
+            //            updateSquadPv(player: playerAttacking)
         } else {
             print("vous n'avez pas fait votre choix, tapez attaquer ou soigner")
             attackOrHeal(playerAttacking: playerAttacking, playerAttacked: playerAttacked)

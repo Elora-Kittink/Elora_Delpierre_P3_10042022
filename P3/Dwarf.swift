@@ -9,10 +9,10 @@ import Foundation
 
 
 // class that inherits from the BaseType class
-class Dwarf: BaseType {
+class Dwarf: BaseCharacter {
     
     
     init(name: String) {
-        super.init(pv: 25, weapon: .axe, healCapacity: false, name: name)
+        super.init(pv: 25, weapon: .axe, healCapacity: false, name: name, pvMax: 25)
     }
 }
