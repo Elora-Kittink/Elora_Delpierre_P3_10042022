@@ -12,7 +12,7 @@ import Foundation
 // MARK: -
 
 
-
+// class of the game 
 class Game {
     
     var numberOfPlayer = 2
